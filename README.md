@@ -38,9 +38,8 @@ To set up the project locally, follow these steps:
 - Nitin : https://github.com/NitinReddy-dev/
 - Chetana : https://github.com/Chetana2403/
 - Ayush : https://github.com/BeerLambert
-- Anoushka : 
 - Deeksha :https://github.com/Deeksha-Dattaraj-Ganapumane
-
+- Anoushka : 
 
 ### Project Progress:
 1. **Visualization of Incidents:**
