@@ -1,0 +1,6 @@
+pandas
+dash
+plotly-express
+langchain
+langchain_openai
+openai
