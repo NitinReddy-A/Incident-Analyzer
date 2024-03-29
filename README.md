@@ -38,7 +38,7 @@ To set up the project locally, follow these steps:
 - Nitin : https://github.com/NitinReddy-dev/
 - Chetana : https://github.com/Chetana2403/
 - Anoushka : 
-- Ayush :
+- Ayush : https://github.com/BeerLambert
 - Deeksha :
 
 
