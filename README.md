@@ -39,7 +39,7 @@ To set up the project locally, follow these steps:
 - Chetana : https://github.com/Chetana2403/
 - Anoushka : 
 - Ayush : https://github.com/BeerLambert
-- Deeksha :
+- Deeksha :https://github.com/Deeksha-Dattaraj-Ganapumane
 
 
 ### Project Progress:
