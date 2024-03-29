@@ -37,8 +37,8 @@ To set up the project locally, follow these steps:
 ### Contributors:
 - Nitin : https://github.com/NitinReddy-dev/
 - Chetana : https://github.com/Chetana2403/
-- Anoushka : 
 - Ayush : https://github.com/BeerLambert
+- Anoushka : 
 - Deeksha :
 
 
