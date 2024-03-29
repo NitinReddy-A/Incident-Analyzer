@@ -39,7 +39,8 @@ To set up the project locally, follow these steps:
 - Chetana : https://github.com/Chetana2403/
 - Ayush : https://github.com/BeerLambert
 - Deeksha :https://github.com/Deeksha-Dattaraj-Ganapumane
-- Anoushka : 
+- Anoushka : https://github.com/s-anoushka
+- 
 
 ### Project Progress:
 1. **Visualization of Incidents:**
