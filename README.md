@@ -30,7 +30,7 @@ HPE GreenLake Private Cloud Enterprise comprises numerous microservices, all uti
 To set up the project locally, follow these steps:
 1. Clone the repository to your local machine.
 2. Install the required dependencies listed in `requirements.txt`.
-3. Obtain necessary access credentials/API keys for PagerDuty.
+3. Obtain necessary access credentials/API keys from PagerDuty and OpenAI.
 4. Configure the project settings and API connections.
 5. Run the relevant scripts for data processing, analysis, and visualization.
 
