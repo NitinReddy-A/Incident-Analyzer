@@ -854,13 +854,6 @@ Categorize the incident: The application crashed unexpectedly when accessing a c
 
 ###Assistant:
 Inadequate Error Handling"
-"A server error occurred during data submission, but the application failed to display any error message to the user. Inadequate error handling mechanisms left users unaware of the data submission failure, leading to data loss
-An unauthorized device connected to the corporate network introduced malware"," leading to a data breach due to insufficient segmentation between employee and guest networks. The lack of proper segmentation allowed the infected device to access sensitive data and compromise network integrity.""","###Human:
-Categorize the incident: A server error occurred during data submission, but the application failed to display any error message to the user. Inadequate error handling mechanisms left users unaware of the data submission failure, leading to data loss
-An unauthorized device connected to the corporate network introduced malware
-
-###Assistant:
- leading to a data breach due to insufficient segmentation between employee and guest networks. The lack of proper segmentation allowed the infected device to access sensitive data and compromise network integrity."""
 "A ransomware attack spread rapidly across the organization's network due to inadequate segmentation controls between departments. The lack of segmentation allowed the ransomware to encrypt data on critical systems, leading to widespread data loss and service disruptions.",Insufficient Network Segmentation,"###Human:
 Categorize the incident: A ransomware attack spread rapidly across the organization's network due to inadequate segmentation controls between departments. The lack of segmentation allowed the ransomware to encrypt data on critical systems, leading to widespread data loss and service disruptions.
 
