@@ -11,7 +11,7 @@ from langchain.chains import LLMChain
 os.environ['OPENAI_API_KEY'] = apikey
 
 # Load incidents data from CSV
-incidents_df = pd.read_csv('data/filtered_incidents.csv')
+incidents_df = pd.read_csv('data/f1.csv')
 
 # Prompt templates
 prompt = PromptTemplate(
@@ -51,8 +51,8 @@ for i in range(0, total_incidents, batch_size):
     for index, row in batch.iterrows():
         category = categorize_incident(row['details'])
         incidents_df.at[index, 'category'] = category
-    incidents_df.to_csv('data/categorized_incidents.csv', index=False)  # Save categorized incidents to a new CSV file
-    print(f"Categorized {min(i + batch_size, total_incidents)} incidents. Waiting for 20 seconds before next batch...")
-    time.sleep(20)  # Introduce a 20-second delay before processing the next batch
+    incidents_df.to_csv('data/c1.csv', index=False)  # Save categorized incidents to a new CSV file
+    print(f"Categorized {min(i + batch_size, total_incidents)} incidents. Waiting for 10 seconds before next batch...")
+    time.sleep(10)  # Introduce a 20-second delay before processing the next batch
 
 print("All incidents categorized and saved successfully.") # Was able to only categorize 100 incidents.
