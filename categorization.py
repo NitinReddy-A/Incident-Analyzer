@@ -53,6 +53,6 @@ for i in range(0, total_incidents, batch_size):
         incidents_df.at[index, 'category'] = category
     incidents_df.to_csv('data/c1.csv', index=False)  # Save categorized incidents to a new CSV file
     print(f"Categorized {min(i + batch_size, total_incidents)} incidents. Waiting for 10 seconds before next batch...")
-    time.sleep(10)  # Introduce a 20-second delay before processing the next batch
+    time.sleep(10)  # Introduce a 10-second delay before processing the next batch
 
 print("All incidents categorized and saved successfully.") 
