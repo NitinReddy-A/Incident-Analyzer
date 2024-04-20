@@ -55,4 +55,4 @@ for i in range(0, total_incidents, batch_size):
     print(f"Categorized {min(i + batch_size, total_incidents)} incidents. Waiting for 10 seconds before next batch...")
     time.sleep(10)  # Introduce a 20-second delay before processing the next batch
 
-print("All incidents categorized and saved successfully.") # Was able to only categorize 100 incidents.
+print("All incidents categorized and saved successfully.") 
