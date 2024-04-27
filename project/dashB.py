@@ -4,6 +4,7 @@ from dash import dcc
 from dash import html
 from dash.dependencies import Input, Output
 import plotly.graph_objs as go
+import plotly.express as px
 import pandas as pd
 
 
@@ -20,8 +21,6 @@ data['created_at'] = pd.to_datetime(data['created_at'])
 # Calculate the total number of services
 total_services = len(data['service'].unique())
 
-print(data['service'].unique())
-
 # Calculate the total number of triggered incidents
 total_triggered = (data['status'] == 'triggered').sum()
 
@@ -33,6 +32,13 @@ total_resolved = (data['status'] == 'resolved').sum()
 
 # Calculate the number of incidents for each service and status
 incidents_by_service_status = data.groupby(['service', 'status']).size().unstack(fill_value=0)
+
+# Filter triggered incidents
+triggered_incidents = data[data['status'] == 'triggered']
+
+# Calculate probability of occurrence for each incident category
+incident_probabilities = triggered_incidents['category'].value_counts(normalize=True)
+
 
 # Define a custom color scale for shades of red with dark maroon, red, and an intermediary shade of red
 colorscale_red = [
@@ -63,6 +69,9 @@ app.layout = html.Div([
             dcc.Graph(id='heat_map', config={'displayModeBar': 'hover'})
         ], className="create_container four columns",style={'height': '450px', 'margin-top': '20px'}),
 
+    html.Div([
+            dcc.Graph(id='pie-chart3'),
+        ],style={'height': '450px', 'margin-top': '20px'}),
 
     html.Div([
         html.Div([
@@ -85,16 +94,17 @@ app.layout = html.Div([
             html.P(f"{total_resolved}")
         ], className="card_container three columns", style={'textAlign': 'center', 'color': 'green', 'fontSize': 30})
 
+
     ], className="row",style={'display':'flex', 'justify-content':'space-between'}),
 
-    # Dropdown and Graphs Section
+    # Dropdown Section
     html.Div([
         html.Div([
             html.P('Select Service:', className='fix_label'),
             dcc.Dropdown(id='service_dropdown',
                          multi=False,
                          clearable=True,
-                         value='TechSavvy Solutions',
+                         value='Payment Processing System',
                          placeholder='Select Service',
                          options=[{'label': c, 'value': c} for c in data['service'].unique()],
                          className='dcc_compon'),
@@ -116,18 +126,22 @@ app.layout = html.Div([
                             style={'textAlign': 'center','fontSize': 25}),
                     html.P(id='resolved_count', style={'textAlign': 'center', 'color': 'green', 'fontSize': 30})
                 ], className="card_container three columns")
-            ], className="row flex-display",style={'display':'flex', 'justify-content':'space-between'})
-        ], className="create_container three columns", id="cross-filter-options"),
-        
-        html.Div([
+            ], className="row flex-display",style={'display':'flex', 'justify-content':'space-between'}),
+            html.Div([
             dcc.Graph(id='pie_chart', config={'displayModeBar': 'hover'})
         ], className="create_container four columns",style={'height': '400px', 'margin-top': '20px'}),
 
         html.Div([
             dcc.Graph(id='pie_chart_1', config={'displayModeBar': 'hover'})
-        ], className="create_container four columns",style={'height': '400px', 'margin-top': '20px'}),
+        ], className="create_container four columns",style={'height': '500px', 'margin-top': '20px'}),
 
-
+        
+        html.Div([
+            dcc.Graph(id='pie-chart4'),
+        ],style={'height': '450px', 'margin-top': '20px'})
+        
+        ], className="create_container three columns", id="cross-filter-options"),
+        
     ], className="row")
 
 ], id="mainContainer")
@@ -190,7 +204,16 @@ def update_heatmap(value):
 
     return fig
 
-
+# Define callback to update the pie chart
+@app.callback(
+    Output('pie-chart3', 'figure'),
+    Input('dummy-input', 'value') 
+)
+def update_pie_chart(dummy_input):
+    
+    fig = px.pie(incident_probabilities, values=incident_probabilities.values, names=incident_probabilities.index,
+                 title='Total Probability of Occurrence by Incident Category')
+    return fig
 
 @app.callback(
     Output('triggered_count', 'children'),
@@ -301,6 +324,24 @@ def update_pie_chart(selected_service):
     )
 
     return pie_chart
+
+@app.callback(
+    Output('pie-chart4', 'figure'),
+    [Input('service_dropdown', 'value')])
+def update_trigger_count(value):
+    if value:
+        filtered_data = data[data['service'] == value]
+    else:
+        filtered_data = data
+
+    triggered_incidents = filtered_data[filtered_data['status'] == 'triggered']
+    # Calculate probability of occurrence for each incident category
+    incident_probabilities = triggered_incidents['category'].value_counts(normalize=True)
+    
+    # Create pie chart using Plotly
+    fig = px.pie(incident_probabilities, values=incident_probabilities.values, names=incident_probabilities.index,
+                 title='Probability of Occurrence by Incidents in the Selected Category')
+    return fig
 
 
 if __name__ == '__main__':
