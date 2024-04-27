@@ -48,3 +48,4 @@ To set up the project locally, follow these steps:
   - Line graph of No. of incidents triggered v/s Time.
 2. **Statistical Analysis:**
   - Initial Categorization of incidents using LLM.
+  - Visualization of most likely incidents occurred as well as the overall split of incidents.
