@@ -1,0 +1,149 @@
+Probability,Incident Name (From),Service Name,Incident Name (To)
+0.0043859649122807015,Disk Capacity Issue,My Web App,Hardware Failure
+0.0043859649122807015,Hardware Failure,My Web App,Hardware Failure
+0.0043859649122807015,Hardware Failure,PulseGuard,Hardware Failure
+0.0043859649122807015,Hardware Failure,PulseGuard,Security Breach
+0.0043859649122807015,Security Breach,PulseGuard,Service Outage/Event
+0.0043859649122807015,Service Outage/Event,PulseGuard,Program Promotion/Initiative
+0.0043859649122807015,Program Promotion/Initiative,PulseGuard,Marketing/Sales-related Incident
+0.0043859649122807015,Marketing/Sales-related Incident,PulseGuard,Configuration Error
+0.0043859649122807015,Configuration Error,PulseGuard,Configuration Error
+0.0043859649122807015,Security Breach,SwiftServe Couriers,Security Breach
+0.0043859649122807015,Environmental Condition Concern,PulseGuard,Performance Degradation
+0.02631578947368421,Service Outage,SwiftServe Couriers,Service Outage
+0.008771929824561403,Service Outage,SwiftServe Couriers,Hardware Failure
+0.0043859649122807015,Service Outage,PulseGuard,Hardware Failure
+0.0043859649122807015,Hardware Failure,PulseGuard,Performance Degradation
+0.0043859649122807015,Performance Degradation,PulseGuard,Configuration Error
+0.0043859649122807015,Configuration Error,PulseGuard,Performance Degradation
+0.0043859649122807015,Performance Degradation,PulseGuard,No Category
+0.0043859649122807015,No Category,PulseGuard,Configuration Error
+0.0043859649122807015,Configuration Error,PulseGuard,Data corruption
+0.0043859649122807015,Data corruption,PulseGuard,Service Outage
+0.013157894736842105,Service Outage,PulseGuard,Service Outage
+0.017543859649122806,Service Outage,SwiftServe Couriers,Performance Degradation
+0.0043859649122807015,Security Breach,SwiftServe Couriers,Hardware Failure
+0.0043859649122807015,Service Outage,PulseGuard,Network Connectivity Problem
+0.0043859649122807015,Network Connectivity Problem,PulseGuard,Health and Wellness Podcast/Broadcasting Service
+0.0043859649122807015,Health and Wellness Podcast/Broadcasting Service,PulseGuard,Performance Degradation
+0.008771929824561403,Performance Degradation,PulseGuard,Software Bug
+0.008771929824561403,Software Bug,PulseGuard,Performance Degradation
+0.0043859649122807015,Performance Degradation,PulseGuard,Campaign/Marketing Related Issue
+0.0043859649122807015,Campaign/Marketing Related Issue,PulseGuard,Software Bug
+0.0043859649122807015,Performance Degradation,PulseGuard,Service Outage
+0.0043859649122807015,Service Outage,PulseGuard,Health Monitoring/Service Feature
+0.0043859649122807015,Health Monitoring/Service Feature,PulseGuard,Service Outage
+0.0043859649122807015,Service Outage,PulseGuard,Health & Safety Program/Initiative
+0.0043859649122807015,Health & Safety Program/Initiative,PulseGuard,Service Outage
+0.008771929824561403,Service Outage,PulseGuard,Performance Degradation
+0.0043859649122807015,Software Bug,PulseGuard,Service Outage
+0.013157894736842105,Performance Degradation,PulseGuard,Performance Degradation
+0.0043859649122807015,Inventory Management Issue,SwiftServe Couriers,Service Outage
+0.0043859649122807015,Service Outage,SwiftServe Couriers,Customer Service Issue
+0.0043859649122807015,Customer Service Issue,SwiftServe Couriers,Service Outage
+0.013157894736842105,Service Outage,SwiftServe Couriers,Security Breach
+0.0043859649122807015,Security Breach,SwiftServe Couriers,Software Bug
+0.0043859649122807015,Software Bug,SwiftServe Couriers,Service Outage
+0.013157894736842105,Service Outage,SwiftServe Couriers,Configuration Error
+0.0043859649122807015,Configuration Error,SwiftServe Couriers,Supply Chain Disruption
+0.0043859649122807015,Supply Chain Disruption,SwiftServe Couriers,Service Outage
+0.013157894736842105,Security Breach,SwiftServe Couriers,Service Outage
+0.0043859649122807015,Performance Degradation,SwiftServe Couriers,System Capacity Issue
+0.0043859649122807015,System Capacity Issue,SwiftServe Couriers,Service Outage
+0.008771929824561403,Configuration Error,SwiftServe Couriers,Security Breach
+0.0043859649122807015,Security Breach,SwiftServe Couriers,Performance Degradation
+0.008771929824561403,Performance Degradation,SwiftServe Couriers,Service Outage
+0.0043859649122807015,Hardware Failure,SwiftServe Couriers,Performance Degradation
+0.0043859649122807015,Performance Degradation,SwiftServe Couriers,Security Breach
+0.008771929824561403,Service Outage,TechSavvy Solutions,Network Connectivity Problem
+0.008771929824561403,Network Connectivity Problem,TechSavvy Solutions,Security Breach
+0.0043859649122807015,Security Breach,TechSavvy Solutions,Performance Degradation
+0.0043859649122807015,Performance Degradation,TechSavvy Solutions,Security Breach
+0.021929824561403508,Security Breach,TechSavvy Solutions,Service Outage
+0.017543859649122806,Service Outage,TechSavvy Solutions,Security Breach
+0.0043859649122807015,Security Breach,TechSavvy Solutions,Service outage
+0.0043859649122807015,Service outage,TechSavvy Solutions,Infrastructure Capacity Issue
+0.0043859649122807015,Infrastructure Capacity Issue,TechSavvy Solutions,Service Outage
+0.0043859649122807015,Service Outage,TechSavvy Solutions,Data Corruption
+0.0043859649122807015,Data Corruption,TechSavvy Solutions,Hardware Failure
+0.0043859649122807015,Hardware Failure,TechSavvy Solutions,Incident Category: Security Breach
+0.0043859649122807015,Incident Category: Security Breach,TechSavvy Solutions,Hardware Failure
+0.0043859649122807015,Hardware Failure,TechSavvy Solutions,Service Outage
+0.0043859649122807015,Service Outage,TechSavvy Solutions,Configuration Error
+0.0043859649122807015,Configuration Error,TechSavvy Solutions,Software Licensing Compliance Issue
+0.0043859649122807015,Software Licensing Compliance Issue,TechSavvy Solutions,Network Connectivity Problem
+0.0043859649122807015,Network Connectivity Problem,TechSavvy Solutions,Software License Management Issue
+0.0043859649122807015,Software License Management Issue,TechSavvy Solutions,Performance Degradation
+0.0043859649122807015,Performance Degradation,TechSavvy Solutions,Disk Capacity Issue
+0.0043859649122807015,Disk Capacity Issue,TechSavvy Solutions,Security Breach
+0.0043859649122807015,Security Breach,TechSavvy Solutions,Security Breach/Security Warning
+0.0043859649122807015,Security Breach/Security Warning,TechSavvy Solutions,Security Breach
+0.008771929824561403,Security Breach,TechSavvy Solutions,Security Breach
+0.0043859649122807015,Service Outage,TechSavvy Solutions,Service Outage
+0.0043859649122807015,Network Connectivity Problem,TechSavvy Solutions,Software Integration Issue
+0.0043859649122807015,Software Integration Issue,TechSavvy Solutions,Security Breach
+0.0043859649122807015,Service Outage,TechSavvy Solutions,Software Bug
+0.0043859649122807015,Software Bug,TechSavvy Solutions,Performance Degradation.
+0.0043859649122807015,Performance Degradation.,TechSavvy Solutions,Security Breach
+0.0043859649122807015,Security Breach,TechSavvy Solutions,Software Bug
+0.0043859649122807015,Software Bug,TechSavvy Solutions,Service Outage
+0.0043859649122807015,Service Outage,TechSavvy Solutions,Performance Degradation
+0.0043859649122807015,Performance Degradation,TechSavvy Solutions,Network Connectivity Problem
+0.0043859649122807015,Network Connectivity Problem,TechSavvy Solutions,Service Outage
+0.0043859649122807015,Security Breach,TechSavvy Solutions,Data Corruption
+0.0043859649122807015,Data Corruption,TechSavvy Solutions,Configuration Error
+0.0043859649122807015,Configuration Error,TechSavvy Solutions,Security Breach
+0.0043859649122807015,Security Breach,TechSavvy Solutions,Network Connectivity Problem
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Configuration  Error
+0.0043859649122807015,Configuration  Error,EcoVibe Cleaners,Hardware Failure
+0.0043859649122807015,Hardware Failure,EcoVibe Cleaners,Software Bug
+0.0043859649122807015,Software Bug,EcoVibe Cleaners,Environmental/Regulatory Issue
+0.0043859649122807015,Environmental/Regulatory Issue,EcoVibe Cleaners,Hardware Failure
+0.0043859649122807015,Hardware Failure,EcoVibe Cleaners,Service Outage
+0.013157894736842105,Service Outage,EcoVibe Cleaners,Configuration Error
+0.09649122807017543,Configuration Error,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Hardware Failure
+0.0043859649122807015,Hardware Failure,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Data Corruption
+0.0043859649122807015,Data Corruption,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Environment/Facilities Management Issue
+0.0043859649122807015,Environment/Facilities Management Issue,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Product Reformulation
+0.0043859649122807015,Product Reformulation,EcoVibe Cleaners,Configuration Error
+0.008771929824561403,Configuration Error,EcoVibe Cleaners,Software Bug
+0.0043859649122807015,Software Bug,EcoVibe Cleaners,Service Outage
+0.0043859649122807015,Service Outage,EcoVibe Cleaners,This output does not have a specific category as it is not an incident but rather a positive initiative.
+0.0043859649122807015,This output does not have a specific category as it is not an incident but rather a positive initiative.,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,E-Commerce Site Configuration Error
+0.0043859649122807015,E-Commerce Site Configuration Error,EcoVibe Cleaners,Packaging Change
+0.0043859649122807015,Packaging Change,EcoVibe Cleaners,Service Outage
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Environment/Conservation Issue
+0.0043859649122807015,Environment/Conservation Issue,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Software Bug,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Environmental Impact
+0.0043859649122807015,Environmental Impact,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Education/Environmental Conservation
+0.0043859649122807015,Education/Environmental Conservation,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Service Outage
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Sustainability Achievement
+0.0043859649122807015,Authentication/Access Issue,EcoVibe Cleaners,Service Outage
+0.0043859649122807015,Authentication/Access Issue,EcoVibe Cleaners,Configuration Error
+0.0043859649122807015,Configuration Error,EcoVibe Cleaners,Authentication/Access Issue
+0.008771929824561403,Authentication/Access Issue,EcoVibe Cleaners,Authentication/Access Issue
+0.0043859649122807015,Service Outage,EcoVibe Cleaners,Authentication/Access Issue
+0.0043859649122807015,Network Connectivity Problem,Payment Processing System,Configuration Error
+0.0043859649122807015,Configuration Error,Payment Processing System,Security Breach
+0.08771929824561403,Authentication/Access Issue,GreenThumb Landscapes,Authentication/Access Issue
+0.0043859649122807015,Authentication/Access Issue,Payment Processing System,Authentication/Access Issue
+0.0043859649122807015,Authentication/Access Issue,Payment Processing System,Configuration Error
+0.0043859649122807015,Configuration Error,Payment Processing System,Configuration Error
+0.0043859649122807015,Configuration Error,Payment Processing System,Hardware Failure
+0.0043859649122807015,Hardware Failure,Payment Processing System,Configuration Error
+0.0043859649122807015,Configuration Error,Payment Processing System,Service Outage
+0.0043859649122807015,Service Outage,Payment Processing System,hardware failure
+0.0043859649122807015,Authentication/Access Issue,GreenThumb Landscapes,Service Outage
+0.0043859649122807015,Service Outage,GreenThumb Landscapes,Service Outage
+0.013157894736842105,Service Outage,GreenThumb Landscapes,Authentication/Access Issue
+0.0043859649122807015,Configuration Error,GreenThumb Landscapes,Authentication/Access Issue
+0.0043859649122807015,Performance Degradation,Payment Processing System,security breach
+0.0043859649122807015,Authentication/Access Issue.,GreenThumb Landscapes,Authentication/Access Issue
