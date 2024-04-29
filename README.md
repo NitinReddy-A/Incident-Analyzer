@@ -49,3 +49,6 @@ To set up the project locally, follow these steps:
 2. **Statistical Analysis:**
   - Initial Categorization of incidents using LLM.
   - Visualization of most likely incidents occurred as well as the overall split of incidents.
+3. **Correlations and Connections:**
+   - Analyzing probabilities of incident occurrences being followed by incidents of different types (P(i|j)).
+   - Exploring visualization techniques for showcasing these relationships effectively.
