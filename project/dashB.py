@@ -60,20 +60,6 @@ app.layout = html.Div([
     ], id="header", style={"margin-bottom": "25px",'textAlign': 'center', 'color': 'navy', 'fontSize': 30}),
 
     html.Div([
-            dcc.Input(id='dummy-input', type='hidden', value='trigger'),
-            dcc.Graph(id='line_chart', config={'displayModeBar': 'hover'})
-        ], className="create_container four columns",style={'height': '450px', 'margin-top': '20px'}),
-
-    html.Div([
-            dcc.Input(id='dummy-input1', type='hidden', value='trigger'),
-            dcc.Graph(id='heat_map', config={'displayModeBar': 'hover'})
-        ], className="create_container four columns",style={'height': '450px', 'margin-top': '20px'}),
-
-    html.Div([
-            dcc.Graph(id='pie-chart3'),
-        ],style={'height': '450px', 'margin-top': '20px'}),
-
-    html.Div([
         html.Div([
             html.H6(children='Total Services'),
             html.P(f"{total_services}")
@@ -96,6 +82,21 @@ app.layout = html.Div([
 
 
     ], className="row",style={'display':'flex', 'justify-content':'space-between'}),
+
+    html.Div([
+            dcc.Input(id='dummy-input', type='hidden', value='trigger'),
+            dcc.Graph(id='line_chart', config={'displayModeBar': 'hover'})
+        ], className="create_container four columns",style={'height': '450px', 'margin-top': '20px'}),
+
+    html.Div([
+            dcc.Input(id='dummy-input1', type='hidden', value='trigger'),
+            dcc.Graph(id='heat_map', config={'displayModeBar': 'hover'})
+        ], className="create_container four columns",style={'height': '450px', 'margin-top': '20px'}),
+
+    html.Div([
+            dcc.Graph(id='pie-chart3'),
+        ],style={'height': '450px', 'margin-top': '20px'}),
+
 
     # Dropdown Section
     html.Div([
@@ -133,12 +134,7 @@ app.layout = html.Div([
 
         html.Div([
             dcc.Graph(id='pie_chart_1', config={'displayModeBar': 'hover'})
-        ], className="create_container four columns",style={'height': '500px', 'margin-top': '20px'}),
-
-        
-        html.Div([
-            dcc.Graph(id='pie-chart4'),
-        ],style={'height': '450px', 'margin-top': '20px'})
+        ], className="create_container four columns",style={'height': '500px', 'margin-top': '20px'})
         
         ], className="create_container three columns", id="cross-filter-options"),
         
@@ -324,24 +320,6 @@ def update_pie_chart(selected_service):
     )
 
     return pie_chart
-
-@app.callback(
-    Output('pie-chart4', 'figure'),
-    [Input('service_dropdown', 'value')])
-def update_trigger_count(value):
-    if value:
-        filtered_data = data[data['service'] == value]
-    else:
-        filtered_data = data
-
-    triggered_incidents = filtered_data[filtered_data['status'] == 'triggered']
-    # Calculate probability of occurrence for each incident category
-    incident_probabilities = triggered_incidents['category'].value_counts(normalize=True)
-    
-    # Create pie chart using Plotly
-    fig = px.pie(incident_probabilities, values=incident_probabilities.values, names=incident_probabilities.index,
-                 title='Probability of Occurrence by Incidents in the Selected Category')
-    return fig
 
 
 if __name__ == '__main__':
