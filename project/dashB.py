@@ -15,6 +15,12 @@ except pd.errors.ParserError:
     # Handle parsing errors
     print("Parsing error occurred. Please check the CSV file for formatting issues.")
 
+# Read the transition probabilities data
+transition_df = pd.read_csv('data/transition_probabilities_within_service.csv')
+
+# Get unique services
+services = transition_df['Service Name'].unique()
+
 
 data['created_at'] = pd.to_datetime(data['created_at'])
 
@@ -54,6 +60,9 @@ app.layout = html.Div([
         html.Div([
             html.Div([
                 html.H3("Incident Analyzer")
+            ]),
+            html.Div([
+                html.H4("Overview of all Incidents")
             ])
         ], id="title"),
 
@@ -109,8 +118,9 @@ app.layout = html.Div([
                          placeholder='Select Service',
                          options=[{'label': c, 'value': c} for c in data['service'].unique()],
                          className='dcc_compon'),
-
-            html.P(f'Incidents in selected Service :', className='fix_label'),
+            html.Div([
+                html.H4("Service Specific Analysis")
+            ],style={"margin-bottom": "25px",'textAlign': 'center', 'color': 'navy', 'fontSize': 30}),
             html.Div([
                 html.Div([
                     html.H6(children='Triggered Incidents',
@@ -130,12 +140,15 @@ app.layout = html.Div([
             ], className="row flex-display",style={'display':'flex', 'justify-content':'space-between'}),
             html.Div([
             dcc.Graph(id='pie_chart', config={'displayModeBar': 'hover'})
-        ], className="create_container four columns",style={'height': '400px', 'margin-top': '20px'}),
+            ], className="create_container four columns",style={'height': '400px', 'margin-top': '20px'}),
 
-        html.Div([
+            html.Div([
             dcc.Graph(id='pie_chart_1', config={'displayModeBar': 'hover'})
-        ], className="create_container four columns",style={'height': '500px', 'margin-top': '20px'})
-        
+            ], className="create_container four columns",style={'height': '500px', 'margin-top': '20px'}),
+
+            html.Div(children=[
+            html.H1(children='Transition Probabilities for Incident Occurence:'),
+            dcc.Graph(id='sankey-diagram')])
         ], className="create_container three columns", id="cross-filter-options"),
         
     ], className="row")
@@ -188,17 +201,27 @@ def update_heatmap(value):
         colorscale=colorscale_red
     )
 
-    # Create layout
+    # Create layout with custom colorbar settings to add white border
     layout = go.Layout(
         title='Heatmap of Incident Count per Service',
         xaxis=dict(title='Service'),
-        yaxis=dict(title='Incidents')
+        yaxis=dict(title='Incidents'),
+        coloraxis=dict(colorbar=dict(
+            tickvals=[0.5, 1.5],  # Set ticks in the middle of each color category
+            ticktext=['', ''],  # Hide tick labels
+            tickmode='array',
+            tickcolor='white',
+            tickwidth=1,
+            lenmode='pixels',
+            len=400  # Set colorbar length
+        ))
     )
 
     # Create figure object
     fig = go.Figure(data=[heatmap], layout=layout)
 
     return fig
+
 
 # Define callback to update the pie chart
 @app.callback(
@@ -320,6 +343,38 @@ def update_pie_chart(selected_service):
     )
 
     return pie_chart
+
+# Define callback to update the Sankey diagram based on dropdown selection
+@app.callback(
+    Output('sankey-diagram', 'figure'),
+    [Input('service_dropdown', 'value')]
+)
+def update_sankey_diagram(selected_service):
+    # Filter the data for the selected service
+    filtered_data = transition_df[transition_df['Service Name'] == selected_service]
+    
+    # Create a Sankey diagram
+    fig = go.Figure(data=[go.Sankey(
+        node=dict(
+            pad=15,
+            thickness=20,
+            line=dict(color='black', width=0.5),
+            label=filtered_data['Incident Name (From)'].tolist() + filtered_data['Incident Name (To)'].tolist(),
+            color="rgba(31, 119, 180, 0.8)"  # Change color to a visually pleasing one
+        ),
+        link=dict(
+            source=filtered_data['Incident Name (From)'].apply(lambda x: filtered_data['Incident Name (From)'].tolist().index(x)).tolist(),
+            target=filtered_data['Incident Name (To)'].apply(lambda x: len(filtered_data['Incident Name (From)'].tolist()) + filtered_data['Incident Name (To)'].tolist().index(x)).tolist(),
+            value=filtered_data['Probability'].tolist(),
+            color="rgba(31, 119, 180, 0.4)"  # Change color to a visually pleasing one
+        )
+    )])
+    
+    # Update layout
+    fig.update_layout(title_text=f"Transition Probabilities for {selected_service}",
+                      font_size=10)
+    
+    return fig
 
 
 if __name__ == '__main__':
