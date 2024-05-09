@@ -29,7 +29,7 @@ To set up the project locally, follow these steps:
 2. Install the required dependencies listed in `requirements.txt`.
 3. Obtain necessary access credentials/API keys from PagerDuty and OpenAI.
 4. Configure the project settings and API connections.
-5. Run the `requirements.txt` for visualization of the dashboard.
+5. Run the `Final_Project/dashB.py` script for visualization of the dashboard.
 
 ### Contributors:
 - Nitin : https://github.com/NitinReddy-dev/
