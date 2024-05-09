@@ -21,7 +21,7 @@ HPE GreenLake Private Cloud Enterprise comprises numerous microservices, all uti
    - Implementing a **Sankey Diagram** for showcasing these relationships effectively.
 
 5. **Live Dashboards:**
-   - Developing dynamic dashboards showcasing incident data in real-time using DASH.
+   - Developing dynamic **dashboards** showcasing incident data in real-time using **DASH**.
 
 ### Getting Started:
 To set up the project locally, follow these steps:
