@@ -5,23 +5,23 @@
 HPE GreenLake Private Cloud Enterprise comprises numerous microservices, all utilizing PagerDuty for incident management. It's imperative to analyze incident data to glean insights into service stability and event patterns. The objective of this project is to develop a comprehensive platform and dashboard that provides meaningful event analytics for all PCE services.
 
 ### Categories of Work:
-1. **Curated Data:**
-   - Identifying and filtering out noise from the dataset to enhance the relevance of subsequent analysis.
+1. **Curation of Data:**
+   - Identifying and **filtering out noise** from the dataset to enhance the relevance of subsequent analysis.
      
 2. **Visualization of Incidents:**
-   - Heatmap of Incidents Count per Service.
-   - Line graph of No. of incidents triggered v/s Time.
+   - **Heatmap** of Incidents Count per Service.
+   - **Line graph** of No. of incidents triggered v/s Time.
 
 3. **Statistical Analysis:**
-   - Initial Categorization of incidents using LLM.
-   - Visualization of most likely incidents occurred as well as the overall split of incidents.
+   - Initial **Categorization** of incidents **using LLM**.
+   - **Visualization of most likely incidents occurred** as well as the overall split of incidents using Pie Charts.
    
-4. **Correlations and Connections:**
-   - Analyzing probabilities of incident occurrences being followed by incidents of different types (P(i|j)).
-   - Exploring visualization techniques for showcasing these relationships effectively.
+4. **Correlations and Connections between the occurance of incidents:**
+   - **Transition Probability** : Analyzing probabilities of incident occurrences being followed by incidents of different types (P(i|j)).
+   - Implementing a **Sankey Diagram** for showcasing these relationships effectively.
 
 5. **Live Dashboards:**
-   - Developing dynamic dashboards showcasing incident data in real-time.
+   - Developing dynamic dashboards showcasing incident data in real-time using DASH.
 
 ### Getting Started:
 To set up the project locally, follow these steps:
