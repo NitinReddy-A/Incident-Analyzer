@@ -32,7 +32,7 @@ To set up the project locally, follow these steps:
 5. Run the `Final_Project/dashB.py` script for visualization of the dashboard.
 
 ### Contributors:
-- Nitin : https://github.com/NitinReddy-dev/
+- Nitin : https://github.com/NitinReddy-A/
 - Chetana : https://github.com/Chetana2403/
 - Ayush : https://github.com/BeerLambert
 - Deeksha : https://github.com/Deeksha-Dattaraj-Ganapumane
