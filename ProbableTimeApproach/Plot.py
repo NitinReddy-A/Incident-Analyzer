@@ -71,4 +71,4 @@ def update_sankey_diagram(selected_service):
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True,port=8000)
