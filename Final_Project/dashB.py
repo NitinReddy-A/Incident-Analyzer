@@ -162,7 +162,7 @@ app.layout = html.Div([
 )
 def update_chart(value):
     # Resample the data to a finer time interval for smoother graph
-    resampled_data = data.resample('10min', on='created_at').size().reset_index(name='count')
+    resampled_data = data.resample('1H', on='created_at').size().reset_index(name='count')
 
     # Create line chart
     figure = {
