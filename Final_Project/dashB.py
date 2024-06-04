@@ -12,10 +12,10 @@ import pandas as pd
 try:
     data = pd.read_csv('data/categorized_incidents.csv')
 except pd.errors.ParserError:
-    # Handle parsing errors
+    
     print("Parsing error occurred. Please check the CSV file for formatting issues.")
 
-# Read the transition probabilities data
+
 transition_df = pd.read_csv('data/transition_probabilities_within_service.csv')
 
 # Get unique services
@@ -46,7 +46,7 @@ triggered_incidents = data[data['status'] == 'triggered']
 incident_probabilities = triggered_incidents['category'].value_counts(normalize=True)
 
 
-# Define a custom color scale for shades of red with dark maroon, red, and an intermediary shade of red
+# Define a custom color scale
 colorscale_red = [
     [0, '#ff9999'], # light red
     [0.5, '#ff0000'], # red
