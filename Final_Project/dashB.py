@@ -106,7 +106,6 @@ app.layout = html.Div([
             dcc.Graph(id='pie-chart3'),
         ],style={'height': '450px', 'margin-top': '20px'}),
 
-
     # Dropdown Section
     html.Div([
         html.Div([
