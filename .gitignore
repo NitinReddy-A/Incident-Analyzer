@@ -1,6 +1,29 @@
-apikey.py
-openai-env
-__pycache__
-Categorization(Finetuning LLM)
-API_keysPagerDuty.txt
-Document
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated pipeline outputs (reproducible from the sample data)
+data/sample/incidents_curated.csv
+data/sample/transition_model.csv
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

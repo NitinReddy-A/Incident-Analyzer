@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "incident-analyzer"
+version = "1.0.0"
+description = "Incident analytics and Markov transition forecasting for PagerDuty-managed service fleets."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+keywords = ["incident-management", "pagerduty", "sre", "aiops", "markov-chain", "observability", "dash"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "pandas>=2.1",
+    "plotly>=5.20",
+    "dash>=2.16",
+    "requests>=2.31",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+llm = ["openai>=1.30"]
+server = ["gunicorn>=22"]
+dev = ["pytest>=8", "ruff>=0.5"]
+
+[project.scripts]
+incident-analyzer = "incident_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["incident_analyzer*"]
+
+[tool.setuptools.package-data]
+"incident_analyzer.dashboard" = ["assets/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
