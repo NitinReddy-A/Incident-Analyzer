@@ -225,11 +225,17 @@ pytest
 ruff check . && ruff format --check .
 ```
 
-## Background and data
-
-Incident Analyzer began as incident-analytics work for a private-cloud platform where dozens of microservices page through PagerDuty. The service-scoped transition approach was developed there as a way to reason about how failures propagate inside a service.
+## Sample data
 
 All data in this repository is synthetic: it comes from a PagerDuty sandbox with fictional services and generated incident descriptions. It contains no customer or production data.
+
+## Program
+
+Incident Analyzer was developed as the project deliverable for the **HPE CTY'24 Technology Project Partnership Program for Industry Readiness** (February – July 2024). The program recognised the completed project with a Certificate of Appreciation.
+
+<p align="center">
+  <img src="docs/cty-certificate.jpg" alt="HPE CTY'24 Certificate of Appreciation" width="560">
+</p>
 
 ## License
 
